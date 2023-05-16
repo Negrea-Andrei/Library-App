@@ -13,12 +13,43 @@
 <body>
     <div class="left">
         <div class="header">Welcome to the Library!</div>
-        <div class="description">This is a place where you can store all your favorite novels. <br>A place where the land of imagination can call home, a place where all
-            your favorite adventures will be stored and protected from all that might want to delete them. And if you ever decide that an adventure is not for you, you can always delete theme.
+        <div class="description">This is a place where you can store all your favorite novels. <br>A place where the
+            land of imagination can call home, a place where all
+            your favorite adventures will be stored and protected from all that might want to delete them. And if you
+            ever decide that an adventure is not for you, you can always delete theme.
             You can also keep track of how many you read.
-            <button>Add book</button>
+            <button>Bring up the form</button>
         </div>
-        <div class="form-container"></div>
+        <div class="form-container">
+            <form>
+                <div class="form-page">
+                    <div class="first">
+                        <div class="book">
+                            <label for="book-name">Book name</label>
+                        </div>
+                        <input type="text" id="book-name" required pattern="(\d{3})">
+                    </div>
+                    <div class="second">
+                        <div class="author">
+                            <label for="author-name">Author name</label>
+                        </div>
+                        <input type="text" id="author-name" required pattern="(\d{3})">
+                    </div>
+                    <div class="third">
+                        <div class="pages">
+                            <label for="pages-number">Number of pages</label>
+                        </div>
+                        <input type="number" id="pages-number" required pattern="(\d{1})">
+                    </div>
+                    <div class="forth">
+                        <div class="read-check">
+                            <label for="read">Read the book?</label>
+                        </div>
+                        <input type="checkbox" id="read" required>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
     <div class="right">
     </div>
