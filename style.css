@@ -108,6 +108,7 @@ button:active {
     align-items: center;
     gap: 40px;
     padding-top: 55px;
+    padding-bottom: 15px;
     padding-left: 25px;    
     overflow: hidden;
 }
@@ -124,6 +125,22 @@ input {
     font-size: 1.3rem;    
     font-family: book, Georgia, 'Times New Roman', Times, serif;
     padding-left: 10px;
+}
+
+.submit {
+    width: 200%;
+    height: 65%;
+    background-color: moccasin;
+    box-shadow: 5px 5px 10px rgb(131, 131, 131);
+}
+
+.submit:hover {
+    background-color: rgba(255, 228, 181, 0.548);
+}
+
+.submit:active {
+    background-color: moccasin;
+    box-shadow: inset 5px 5px 10px rgb(131, 131, 131);
 }
 
 #read{
