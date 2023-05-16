@@ -143,7 +143,9 @@ input {
 }
 
 #read{
-    height: 35px;
+    display: flex;
+    justify-content: flex-start;
+    height: 45px;
 }
 
 .first-line, .second-line, .third-line, .forth-line {
@@ -175,6 +177,10 @@ input {
     box-shadow: 5px 3px 10px rgb(146, 146, 146);
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.book-card:hover {
+    background-color: rgb(243, 255, 215);
 }
 
 .title-card {
