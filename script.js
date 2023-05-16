@@ -1,25 +1,25 @@
-const hide = document.querySelector(".display-form");
+const form = document.querySelector(".display-form");
 const formPage = document.querySelector(".form-container");
 
-let seek = false;
+let visible = false;
 
-function hideAndSeek() {
-    if (seek == false) {
-        seek = true;
+function visibility() {
+    if (visible == false) {
+        visible = true;
     }
-    else if (seek == true) {
-        seek = false;
+    else if (visible == true) {
+        visible = false;
     }
 }
 
-function test() {
-    hideAndSeek();
-    if (seek == true) {
+function formVisible() {
+    visibility();
+    if (visible == true) {
         formPage.style.setProperty('display', 'block')
     }
-    else if (seek == false) {
+    else if (visible == false) {
         formPage.style.setProperty('display', 'none')
     }
 }
 
-hide.addEventListener('click', test)
+form.addEventListener('click', formVisible)
