@@ -33,11 +33,13 @@ body {
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
     width: 65%;
+    min-width: 650px;
     background-color: aliceblue;
 }
 
 .left {
     width: 40%;
+    min-width: 550px;
     display: flex;
     flex-direction: column;
     gap: 10px;

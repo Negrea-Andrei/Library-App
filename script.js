@@ -26,14 +26,19 @@ function addBooks() {
     const newBook = new book(title, author, pages, read);
 
     //add the new book to the array
-    books.push(newBook);
-
-    console.log(books)
+    if (!title || !author || !pages) {
+       alert("Please fill all the inputs")
+    }
+    else {
+        books.push(newBook);
+        console.log(books)
+    }    
 }
 
 submit.addEventListener("click", event => {
     event.preventDefault()
     addBooks()
+    document.getElementById('form-document').reset();
 });
 
 //Make the form appear

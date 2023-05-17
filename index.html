@@ -12,34 +12,34 @@
 
 <body>
     <div class="left">
-        <div class="header">Welcome to the Library!</div>
-        <div class="description">This is a place where you can store all your favorite novels. <br>A place where the
+        <div class="header"><h5>Welcome to the Library!</h5></div>
+        <div class="description"><p>This is a place where you can store all your favorite novels. <br>A place where the
             land of imagination can call home, a place where all
             your favorite adventures will be stored and protected from all that might want to delete them. And if you
             ever decide that an adventure is not for you, you can always delete theme.
-            You can also keep track of how many you read.
+            You can also keep track of how many you read.</p>
             <button class="display-form">Bring up the form</button>
         </div>
         <div class="form-container">
-            <form>
+            <form id="form-document">
                 <div class="form-page">
                     <div class="first-line">
                         <div class="title">
                             <label for="book-title">Book name</label>
                         </div>
-                        <input type="text" id="book-title" required pattern="(\d{3}?)">
+                        <input type="text" id="book-title"  pattern="^[a-zA-Z]{3,}$" required>
                     </div>
                     <div class="second-line">
                         <div class="author">
                             <label for="author-name">Author name</label>
                         </div>
-                        <input type="text" id="author-name" pattern="(\d{3}?)" required>
+                        <input type="text" id="author-name" pattern="^[a-zA-Z]{3,}$" required>
                     </div>
                     <div class="third-line">
                         <div class="pages">
                             <label for="pages-number">Number of pages</label>
                         </div>
-                        <input type="number" id="pages-number" required pattern="(\d{1})">
+                        <input type="number" id="pages-number" pattern="(\d{1})" required>
                     </div>
                     <div class="forth-line">
                         <div class="read-check">
