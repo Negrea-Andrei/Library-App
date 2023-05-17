@@ -30,7 +30,7 @@ body {
     border: 5px solid #e4c3bd;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 20px;
     width: 65%;
     background-color: aliceblue;
@@ -101,6 +101,7 @@ button:active {
     background-color: burlywood;
     border-radius: 15px;    
     overflow: hidden;
+    display: none;
 }
 
 .form-page {
@@ -188,7 +189,6 @@ input {
 
 .title-card {
     font-family: book, Georgia, 'Times New Roman', Times, serif;
-    font-size: x-large;
     overflow-wrap: break-word;
     display: flex;
     justify-content: center;
