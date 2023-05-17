@@ -25,7 +25,7 @@ function addBooks() {
     //create the book
     const newBook = new book(title, author, pages, read);
 
-    //add the new book to the array
+    //add the new book to the array if the inputs are correct
     if (!title || !author || !pages) {
        alert("Please fill all the inputs")
     }
