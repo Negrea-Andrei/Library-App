@@ -20,7 +20,7 @@ function addBooks() {
     const title = document.getElementById("book-title").value;
     const author = document.getElementById("author-name").value;
     const pages = document.getElementById("pages-number").value;
-    const read = document.getElementById("read").ariaChecked;
+    const read = document.getElementById("read").checked;
 
     //create the book
     const newBook = new book(title, author, pages, read);
