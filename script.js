@@ -22,52 +22,50 @@ function book(title, author, pages, read) {
 
 //book display function
 function displayBooks() {
-    books.forEach(element => {
-        //get the index of the book for the delete button
-        let index = books.indexOf(element);
+    //get the index of the book for the delete button
+    let index = books.length - 1;
 
-        //prepare the book card with all the information about the book
-        let bookCard = document.createElement('div');
-        let bookTitle = document.createElement('div');
-        let bookAuthor = document.createElement('div');
-        let bookPages = document.createElement('div');
-        let bookRead = document.createElement('input');
+    //prepare the book card with all the information about the book
+    let bookCard = document.createElement('div');
+    let bookTitle = document.createElement('div');
+    let bookAuthor = document.createElement('div');
+    let bookPages = document.createElement('div');
+    let bookRead = document.createElement('input');
 
-        //Delete button
-        let bookDelete = document.createElement('button');
-        bookDelete.innerHTML = "Delete"
+    //Delete button
+    let bookDelete = document.createElement('button');
+    bookDelete.innerHTML = "Delete"
 
-        bookTitle.innerHTML = element.title;
-        bookAuthor.innerHTML = `Author: ${element.author}`;
-        bookPages.innerHTML = `Pages: ${element.pages}`;
+    bookTitle.innerHTML = books[index].title;
+    bookAuthor.innerHTML = `Author: ${books[index].author}`;
+    bookPages.innerHTML = `Pages: ${books[index].pages}`;
 
-        // Set the checked property of bookRead based on the value of read checkbox
-        bookRead.type = 'checkbox';
-        bookRead.checked = element.read;
+    // Set the checked property of bookRead based on the value of read checkbox
+    bookRead.type = 'checkbox';
+    bookRead.checked = books[index].read;
 
-        //Append the parts of the book to the book card
-        bookCard.appendChild(bookTitle).className = "title-card";
-        bookCard.appendChild(bookAuthor).className = "author-card";
-        bookCard.appendChild(bookPages).className = "pages-card";
-        bookCard.appendChild(bookRead).className = "checked-card";
-        bookCard.appendChild(bookDelete).className = "delete";
+    //Append the parts of the book to the book card
+    bookCard.appendChild(bookTitle).className = "title-card";
+    bookCard.appendChild(bookAuthor).className = "author-card";
+    bookCard.appendChild(bookPages).className = "pages-card";
+    bookCard.appendChild(bookRead).className = "checked-card";
+    bookCard.appendChild(bookDelete).className = "delete";
 
-        //Append the book-card to the grid
-        grid.appendChild(bookCard).className = "book-card";
+    //Append the book-card to the grid
+    grid.appendChild(bookCard).className = "book-card";
 
-        //Delete function
-        function deleteBook() {
-            books.splice(index, 1)
-        }
+    //Delete function
+    function deleteBook() {
+        books.splice(index, 1)
+    }
 
-        function test() {
-            deleteBook();
-            displayBooks();
-        }
+    function test() {
+        deleteBook();
+        displayBooks();
+    }
 
-        const deleteButton = document.querySelector(".delete");
-        deleteButton.addEventListener('click', test)
-    })
+    const deleteButton = document.querySelector(".delete");
+    deleteButton.addEventListener('click', test)
 }
 
 //function that add them to the array
@@ -85,7 +83,7 @@ function addBooks() {
         alert("Please fill all the inputs")
     }
     else {
-        books.push(newBook);        
+        books.push(newBook);
         displayBooks();
     }
 }
