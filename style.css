@@ -29,7 +29,7 @@ body {
 .right {
     border: 5px solid #e4c3bd;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
     width: 65%;
@@ -191,6 +191,7 @@ input {
 
 .title-card {
     font-family: book, Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
     overflow-wrap: break-word;
     display: flex;
     justify-content: center;
