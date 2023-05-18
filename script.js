@@ -23,8 +23,6 @@ function book(title, author, pages, read) {
 //book display function
 function displayBooks() {
     books.forEach(element => {
-        grid.innerHTML = ''
-
         //get the index of the book for the delete button
         let index = books.indexOf(element);
 
