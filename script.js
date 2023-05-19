@@ -9,8 +9,6 @@ const submit = document.querySelector(".submit")
 //Link the grid to a variable
 const grid = document.querySelector(".right")
 
-//Variable to store the delete buttons nodes
-let deleteNodes;
 
 //Array where the created books are stored
 const books = [];
@@ -60,18 +58,19 @@ function displayBooks() {
     //Append the book-card to the grid
     grid.appendChild(bookCard).className = "book-card";
 
-    //Add a new delete button to the nodes list every time a new book is created
-    deleteNodes = document.querySelectorAll(".delete");
 
     //Make the delete buttons remove the card from the grid
-    deleteNodes.forEach(element => {
-        element.addEventListener('click', () => {
-            const parentElement = element.parentNode;
-            parentElement.remove();
-        });
+    bookDelete.addEventListener('click', () => {
+        const parentElement = bookDelete.parentNode;
+        parentElement.remove();
+
+        let number = parseInt(bookDelete.getAttribute('data-value'));
+
+        books.splice(number, 1);
+
+        console.log(books);
     });
 }
-
 
 //function that add them to the array
 function addBooks() {
