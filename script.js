@@ -58,16 +58,17 @@ function displayBooks() {
     //Append the book-card to the grid
     grid.appendChild(bookCard).className = "book-card";
 
-
+    //FIX THIS!!!!!
+    //FIX THIS!!!!!
+    //FIX THIS!!!!!
+    //FIX THIS!!!!!
     //Make the delete buttons remove the card from the grid
     bookDelete.addEventListener('click', () => {
         const parentElement = bookDelete.parentNode;
         parentElement.remove();
-
-        let number = parseInt(bookDelete.getAttribute('data-value'));
+        let number = bookDelete.getAttribute('data-value');
 
         books.splice(number, 1);
-
         console.log(books);
     });
 }
