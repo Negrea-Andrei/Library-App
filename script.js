@@ -63,8 +63,15 @@ function displayBooks() {
     //Add a new delete button to the nodes list every time a new book is created
     deleteNodes = document.querySelectorAll(".delete");
 
-    console.log(bookCard.data-value)
+    //Make the delete buttons remove the card from the grid
+    deleteNodes.forEach(element => {
+        element.addEventListener('click', () => {
+            const parentElement = element.parentNode;
+            parentElement.remove();
+        });
+    });
 }
+
 
 //function that add them to the array
 function addBooks() {
