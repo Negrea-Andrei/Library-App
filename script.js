@@ -62,6 +62,8 @@ function displayBooks() {
     //FIX THIS!!!!!
     //FIX THIS!!!!!
     //FIX THIS!!!!!
+    //Add a return value to the function sa that an variable holding all the nodes is updated
+    //Put a different function in the submit button that ads an event listener tot he delete buttons so that the array element is deleted!!!!!!!!!!!!!
     //Make the delete buttons remove the card from the grid
     bookDelete.addEventListener('click', () => {
         const parentElement = bookDelete.parentNode;
@@ -112,6 +114,5 @@ function visibility() {
         formPage.style.setProperty('display', 'none')
     };
 }
-
 
 form.addEventListener('click', visibility)
