@@ -34,7 +34,7 @@ function displayBooks() {
     let bookRead = document.createElement('input');
 
     //Add a data value to the elements to keep track of them
-    bookCard.setAttribute('data-value', books.length);
+    bookCard.setAttribute('data-value', (books.length -1));
 
     //Delete button
     let bookDelete = document.createElement('button');
@@ -66,7 +66,7 @@ function displayBooks() {
     bookDelete.addEventListener('click', () => {
         const parentElement = bookDelete.parentNode;
         parentElement.remove();
-        let number = bookDelete.getAttribute('data-value');
+        let number = parentElement.getAttribute('data-value');
 
         books.splice(number, 1);
         console.log(books);
