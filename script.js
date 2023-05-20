@@ -34,7 +34,7 @@ function displayBooks() {
     let bookRead = document.createElement('input');
 
     //Add a data value to the elements to keep track of them
-    bookCard.setAttribute('data-value', (books.length -1));
+    bookCard.setAttribute('data-value', (books.length - 1));
 
     //Delete button
     let bookDelete = document.createElement('button');
@@ -58,22 +58,25 @@ function displayBooks() {
     //Append the book-card to the grid
     grid.appendChild(bookCard).className = "book-card";
 
-    //FIX THIS!!!!!
-    //FIX THIS!!!!!
-    //FIX THIS!!!!!
-    //FIX THIS!!!!!
-    //Add a return value to the function sa that an variable holding all the nodes is updated
-    //Put a different function in the submit button that ads an event listener tot he delete buttons so that the array element is deleted!!!!!!!!!!!!!
+    
     //Make the delete buttons remove the card from the grid
     bookDelete.addEventListener('click', () => {
         const parentElement = bookDelete.parentNode;
         parentElement.remove();
-        let number = parentElement.getAttribute('data-value');
+        let data_value = parentElement.getAttribute('data-value');
 
-        books.splice(number, 1);
-        console.log(books);
+        books.splice(data_value, 1);
+
+        //Change the data-value of the books after a book is deleted
+        //This will make the book-card data coincide to the value of the book object in the array        
+        const bookCards = document.querySelectorAll(".book-card");
+        bookCards.forEach((card, newIndex) => {
+            if (newIndex >= data_value) {
+                card.setAttribute('data-value', newIndex);
+            }
+        });
     });
-}
+};
 
 //function that add them to the array
 function addBooks() {
