@@ -206,3 +206,36 @@ input {
     align-items: center;
     text-align: center
 }
+
+.warning {
+    height: 50%;
+    width: 50%;
+    background-color: rgb(238, 106, 106);
+    border-radius: 15px;
+    border: 5px solid red;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    text-align: center;
+    font-size: xx-large;
+    display: none;
+}
+
+.close {
+    background-color: rgb(255, 69, 69);
+}
+
+.close:hover {
+    background-color: rgb(255, 50, 50);
+}
+
+footer {
+    height: 20px;
+    width: 100%;
+    background-color: rgba(255, 234, 219, 0.829);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: fixed;
+    top: 98%;
+    border-radius: 15px;
+}
